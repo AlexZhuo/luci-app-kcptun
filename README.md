@@ -5,6 +5,8 @@ Luci support for kcptun
 
 ## 编译
 
+从 OpenWrt 的 [SDK][openwrt-sdk] 编译
+
 ```
 # 解压下载好的 SDK
 tar xjf OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
@@ -15,7 +17,7 @@ git clone https://github.com/AlexZhuo/luci-app-kcptun.git package/luci-app-kcptu
 pushd package/luci-app-kcptun/tools/po2lmo
 make && sudo make install
 popd
-# 选择要编译的包 LuCI -> 3. Applications
+# 选择要编译的包 Network -> LuCI -> luci-app-kcptun
 make menuconfig
 # 开始编译
 make package/luci-app-kcptun/compile V=99
@@ -48,3 +50,13 @@ ar71xx ramips 可以到这里下载 https://github.com/bettermanbao/openwrt-kcpt
 opkg remove luci-app-kcptun
 rm -rf /usr/bin/kcptun
 ```
+截图
+---
+![](https://github.com/AlexZhuo/BreakwallOpenWrt/raw/master/screenshots/kcptun1.png)
+
+![](https://github.com/AlexZhuo/BreakwallOpenWrt/raw/master/screenshots/kcptun2.png)
+
+![](https://github.com/AlexZhuo/BreakwallOpenWrt/raw/master/screenshots/kcptun3.png)
+
+[A]: http://www.right.com.cn/forum/thread-198649-1-1.html
+[openwrt-sdk]: https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
