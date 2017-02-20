@@ -8,10 +8,10 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
-    SECTION:=utils
-    CATEGORY:=Utilities
-    TITLE:=LuCI support for Kcptun
-	
+	CATEGORY:=Network
+	SUBMENU:=Luci
+	TITLE:=LuCI support for Kcptun
+	PKGARCH:=all
 endef
 
 
